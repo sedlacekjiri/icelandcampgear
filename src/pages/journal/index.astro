@@ -1,0 +1,289 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  {
+    slug: 'ring-road-camping-guide',
+    title: 'The Ultimate Ring Road Camping Guide',
+    description: 'Everything you need to know about camping Iceland\'s famous Route 1 — from the best spots to essential gear and safety tips.',
+    category: 'Guide',
+    date: '2024-05-15',
+    readTime: '8 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dce76c6a35e7e2340197b_DJI_0069.jpg',
+  },
+  {
+    slug: 'camping-in-iceland-highlands',
+    title: 'Camping in the Icelandic Highlands',
+    description: 'The interior highlands are Iceland\'s last true wilderness. Here\'s everything you need to know about planning your highlands expedition.',
+    category: 'Adventure',
+    date: '2024-06-02',
+    readTime: '7 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg',
+  },
+  {
+    slug: 'what-to-pack-iceland-camping',
+    title: 'What to Pack for Iceland Camping',
+    description: 'Our definitive packing checklist for camping in Iceland — from layers and rain gear to electronics and safety essentials.',
+    category: 'Tips',
+    date: '2024-04-20',
+    readTime: '6 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg',
+  },
+  {
+    slug: 'best-campsites-iceland',
+    title: 'The Best Campsites in Iceland',
+    description: 'From luxury campsite facilities to wild spots with views of the Northern Lights — our guide to Iceland\'s finest places to pitch a tent.',
+    category: 'Guide',
+    date: '2024-03-10',
+    readTime: '9 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b6346fa8b47bafe2cf0f_0B7A5459.jpeg',
+  },
+  {
+    slug: 'iceland-camping-rules',
+    title: 'Iceland Camping Rules & Regulations',
+    description: 'Wild camping, campsite fees, fire regulations — everything you need to know to camp legally and responsibly in Iceland.',
+    category: 'Tips',
+    date: '2024-02-28',
+    readTime: '5 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633bbd8bc5e09a5992a180f_0B7A5348_2.png',
+  },
+  {
+    slug: 'winter-camping-iceland',
+    title: 'Winter Camping in Iceland: A Complete Guide',
+    description: 'Camping in Iceland in winter is one of the most magical experiences on Earth — if you\'re prepared. Here\'s how to do it safely.',
+    category: 'Guide',
+    date: '2024-01-15',
+    readTime: '10 min read',
+    image: 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/665f211c6cf86c45992d44cd_0B7A7792.JPG',
+  },
+];
+
+const categories = ['All', 'Guide', 'Adventure', 'Tips'];
+---
+
+<Layout
+  title="Journal — Iceland Camp Gear"
+  description="Camping stories, destination guides, gear tips, and Iceland travel inspiration from the Iceland Camp Gear team."
+>
+  <div class="page-hero">
+    <div class="container">
+      <span class="badge badge--white">Stories & Guides</span>
+      <h1>Journal</h1>
+      <p>Camping stories, route guides, and practical tips for exploring Iceland's wild landscapes.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Category filter -->
+      <div class="journal-filters">
+        {categories.map(cat => (
+          <button class:list={['filter-btn', cat === 'All' && 'active']} data-filter={cat}>
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Featured post -->
+      <a href={`/journal/${posts[0].slug}`} class="featured-post">
+        <div class="featured-img">
+          <img src={posts[0].image} alt={posts[0].title} loading="eager" />
+        </div>
+        <div class="featured-body">
+          <span class="badge badge--green">{posts[0].category}</span>
+          <h2>{posts[0].title}</h2>
+          <p>{posts[0].description}</p>
+          <div class="post-meta">
+            <time>{new Date(posts[0].date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            <span class="dot">·</span>
+            <span>{posts[0].readTime}</span>
+          </div>
+          <span class="read-more-link">Read article →</span>
+        </div>
+      </a>
+
+      <!-- Post grid -->
+      <div class="posts-grid">
+        {posts.slice(1).map(post => (
+          <a href={`/journal/${post.slug}`} class="post-card" data-category={post.category}>
+            <div class="post-img">
+              <img src={post.image} alt={post.title} loading="lazy" />
+              <span class="post-cat-overlay">{post.category}</span>
+            </div>
+            <div class="post-body">
+              <h3>{post.title}</h3>
+              <p>{post.description}</p>
+              <div class="post-meta">
+                <time>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
+                <span class="dot">·</span>
+                <span>{post.readTime}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section section--tint">
+    <div class="container newsletter">
+      <div class="newsletter-text">
+        <h2>Iceland adventure inspiration in your inbox</h2>
+        <p>New guides, gear tips, and trip ideas — sent occasionally. No spam, ever.</p>
+      </div>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit" class="btn btn--primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const postCards = document.querySelectorAll('.post-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+      postCards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        (card as HTMLElement).style.display = (filter === 'All' || cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+<style>
+.journal-filters {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: .45rem 1.1rem;
+  border-radius: 100px;
+  font-size: .85rem;
+  font-weight: 500;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-dark);
+  background: var(--color-white);
+  transition: all .15s;
+  cursor: pointer;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--color-green);
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+.featured-post {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .25s, transform .25s;
+}
+.featured-post:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.featured-img { overflow: hidden; min-height: 360px; }
+.featured-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.featured-post:hover .featured-img img { transform: scale(1.04); }
+.featured-body {
+  padding: 2.5rem 2.5rem 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .75rem;
+}
+.featured-body h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+.featured-body p { font-size: .95rem; color: var(--color-mid); }
+.post-meta { font-size: .82rem; color: var(--color-muted); display: flex; align-items: center; gap: .5rem; }
+.dot { font-size: .5rem; }
+.read-more-link { font-size: .9rem; font-weight: 600; color: var(--color-green); }
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px,100%),1fr));
+  gap: 1.75rem;
+}
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .25s, transform .25s;
+}
+.post-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.post-img { position: relative; overflow: hidden; }
+.post-img img { width: 100%; height: 220px; object-fit: cover; transition: transform .4s; }
+.post-card:hover .post-img img { transform: scale(1.05); }
+.post-cat-overlay {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  background: var(--color-green);
+  color: white;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  padding: .2rem .65rem;
+  border-radius: 100px;
+}
+.post-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  flex: 1;
+}
+.post-body h3 { font-size: 1.05rem; }
+.post-body p { font-size: .88rem; color: var(--color-mid); flex: 1; }
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.newsletter-text h2 { font-size: 1.5rem; margin-bottom: .25rem; }
+.newsletter-text p { font-size: .92rem; color: var(--color-mid); }
+.newsletter-form { display: flex; gap: .75rem; flex-shrink: 0; }
+.newsletter-form input {
+  padding: .7rem 1.1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: .95rem;
+  min-width: 260px;
+  outline: none;
+}
+.newsletter-form input:focus { border-color: var(--color-green); }
+
+@media (max-width: 768px) {
+  .featured-post { grid-template-columns: 1fr; }
+  .featured-body { padding: 1.5rem; }
+  .newsletter { flex-direction: column; }
+  .newsletter-form { width: 100%; }
+  .newsletter-form input { min-width: 0; flex: 1; }
+}
+</style>

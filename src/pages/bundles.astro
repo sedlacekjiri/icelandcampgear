@@ -1,0 +1,353 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const bundles = [
+  {
+    id: 'solo',
+    icon: '🧍',
+    name: 'Solo Adventurer',
+    tagline: 'The complete kit for the independent traveller',
+    description: 'Everything you need for a solo Iceland adventure — from the Ring Road to the Highlands. Compact, lightweight, and Iceland-ready.',
+    priceDay: '6,500',
+    priceWeek: '39,000',
+    savings: '18%',
+    ideal: 'Solo travellers, backpackers, budget explorers',
+    includes: [
+      { item: 'Hilleberg Akto (1-person tent)', note: 'Legendary wind resistance' },
+      { item: 'Therm-a-Rest Questar sleeping bag', note: '−6°C rated' },
+      { item: 'Therm-a-Rest NeoAir XLite sleep pad', note: 'R-value 4.2' },
+      { item: 'MSR PocketRocket 2 stove + fuel canister', note: '' },
+      { item: 'MSR Flex 2 cookset', note: '2 pots + pan' },
+      { item: 'Black Diamond Storm headlamp', note: '500 lumens' },
+      { item: 'Sea to Summit dry bag (20L)', note: '' },
+    ],
+    featured: false,
+    color: 'default',
+  },
+  {
+    id: 'couple',
+    icon: '👫',
+    name: "Couple's Bundle",
+    tagline: 'Perfect for two — more comfort, more fun',
+    description: 'Our most popular bundle. Designed for couples exploring Iceland together, with extra comfort features for multi-day adventures.',
+    priceDay: '11,500',
+    priceWeek: '69,000',
+    savings: '22%',
+    ideal: 'Couples, best friends, two-person road trips',
+    includes: [
+      { item: 'MSR Hubba Hubba 2-person tent', note: 'Freestanding, easy pitch' },
+      { item: '2× Therm-a-Rest Questar sleeping bags', note: '−6°C rated' },
+      { item: '2× Therm-a-Rest NeoAir XLite sleep pads', note: '' },
+      { item: 'Campingaz 2-burner stove + fuel', note: '' },
+      { item: 'MSR Flex 4 cookset', note: 'Pots, pan, lids' },
+      { item: '2× Petzl Actik Core headlamps', note: '' },
+      { item: 'Black Diamond Moji lantern', note: '' },
+      { item: '2× Helinox Chair One', note: 'Ultralight camp chairs' },
+      { item: '2× Sea to Summit dry bags (20L)', note: '' },
+    ],
+    featured: true,
+    color: 'green',
+  },
+  {
+    id: 'family',
+    icon: '👨‍👩‍👧‍👦',
+    name: 'Family Bundle',
+    tagline: 'Spacious & comfortable for the whole family',
+    description: 'Make Iceland unforgettable for the whole family. This bundle includes everything you need for comfortable camping with kids.',
+    priceDay: '19,500',
+    priceWeek: '117,000',
+    savings: '25%',
+    ideal: 'Families of 3–4, groups with children',
+    includes: [
+      { item: 'Outwell Cloud 4 family tent', note: '2 separate bedrooms' },
+      { item: '4× Mountain Hardwear Lamina sleeping bags', note: '−10°C, synthetic' },
+      { item: '4× Therm-a-Rest MondoKing sleep pads', note: 'Maximum comfort' },
+      { item: 'Campingaz 2-burner stove + fuel', note: '' },
+      { item: 'MSR Flex 4 large cookset', note: '' },
+      { item: '4× Black Diamond Storm headlamps', note: '' },
+      { item: 'BioLite SiteLight XL lantern', note: 'Solar-powered' },
+      { item: 'Coleman 40L cooler box', note: '' },
+      { item: 'Foldable camp table', note: 'Seats 4' },
+      { item: '4× Helinox Chair One', note: '' },
+      { item: '4× Sea to Summit dry bags', note: '' },
+    ],
+    featured: false,
+    color: 'default',
+  },
+  {
+    id: 'group',
+    icon: '👥',
+    name: 'Group Explorer',
+    tagline: 'For larger groups and serious expeditions',
+    description: 'Planning a group trip? This bundle handles 6 people with full kitchen setup, multiple tents, and all the extras for a week-long adventure.',
+    priceDay: '32,000',
+    priceWeek: '192,000',
+    savings: '28%',
+    ideal: 'Groups of 5–6, expeditions, group travel',
+    includes: [
+      { item: '2× MSR Hubba Hubba tents (2p each)', note: '' },
+      { item: '1× Outwell Cloud 4 family tent', note: '' },
+      { item: '6× Therm-a-Rest Questar sleeping bags', note: '' },
+      { item: '6× Therm-a-Rest NeoAir XLite pads', note: '' },
+      { item: 'Campingaz 2-burner stove + fuel', note: '' },
+      { item: 'MSR WhisperLite backup stove', note: '' },
+      { item: 'Large cookset (6-person)', note: '' },
+      { item: '6× headlamps + 2× lanterns', note: '' },
+      { item: 'Coleman 40L cooler box', note: '' },
+      { item: '2× foldable tables + 6× chairs', note: '' },
+      { item: 'Garmin inReach Mini 2', note: 'Satellite communicator' },
+      { item: '6× Sea to Summit dry bags', note: '' },
+    ],
+    featured: false,
+    color: 'default',
+  },
+  {
+    id: 'premium',
+    icon: '⭐',
+    name: 'Premium Couple',
+    tagline: 'The best of the best for a luxury camping experience',
+    description: 'For those who want to camp in Iceland without compromising on quality or comfort. Top-of-the-line gear from Hilleberg, Therm-a-Rest, and Sea to Summit.',
+    priceDay: '18,000',
+    priceWeek: '108,000',
+    savings: '20%',
+    ideal: 'Discerning travellers, honeymoons, anniversary trips',
+    includes: [
+      { item: 'Hilleberg Nallo 2 GT tent', note: 'Hilleberg\'s finest 2-person tent' },
+      { item: '2× Sea to Summit Spark SP1 sleeping bags', note: '0°C, ultralight down' },
+      { item: '2× Therm-a-Rest NeoAir XTherm pads', note: 'R-value 7.3 — warmest available' },
+      { item: 'MSR WindBurner stove system', note: 'Wind-proof, ultra-efficient' },
+      { item: 'GSI Pinnacle Camper cookset', note: 'Premium nesting cookset' },
+      { item: '2× Petzl ACTIK CORE headlamps', note: '' },
+      { item: 'BioLite SiteLight XL lantern', note: '' },
+      { item: '2× Helinox Chair Zero', note: 'Lightest camp chair available' },
+      { item: 'Garmin inReach Mini 2', note: 'Satellite communicator + GPS' },
+      { item: 'Helly Hansen rain jacket + trousers (×2)', note: '' },
+      { item: '2× Merino wool base layer sets', note: '' },
+      { item: '2× Sea to Summit 20L dry bags', note: '' },
+    ],
+    featured: false,
+    color: 'dark',
+  },
+];
+---
+
+<Layout
+  title="Bundles — Iceland Camp Gear"
+  description="Save with our curated camping bundles for Iceland. Solo, couple, family, and group options — everything you need at a discounted rate."
+>
+  <div class="page-hero">
+    <div class="container">
+      <span class="badge badge--white">Best Value Options</span>
+      <h1>Rental Bundles</h1>
+      <p>Curated sets of equipment designed for every group size. Save up to 28% compared to renting items individually.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="bundles-list">
+        {bundles.map(bundle => (
+          <div class:list={['bundle-full', bundle.featured && 'bundle-full--featured', bundle.color === 'dark' && 'bundle-full--dark']} id={bundle.id}>
+            {bundle.featured && <div class="featured-badge">Most Popular</div>}
+
+            <div class="bundle-full-header">
+              <div>
+                <div class="bundle-name-row">
+                  <span class="bundle-big-icon">{bundle.icon}</span>
+                  <div>
+                    <h2>{bundle.name}</h2>
+                    <p class="bundle-tagline">{bundle.tagline}</p>
+                  </div>
+                </div>
+                <p class="bundle-desc">{bundle.description}</p>
+                <p class="bundle-ideal"><strong>Ideal for:</strong> {bundle.ideal}</p>
+              </div>
+
+              <div class="bundle-pricing">
+                <div class="price-block">
+                  <span class="price-label">Per day</span>
+                  <span class="price-big">{bundle.priceDay} ISK</span>
+                </div>
+                <div class="price-block">
+                  <span class="price-label">Per week (7 days)</span>
+                  <span class="price-week">{bundle.priceWeek} ISK</span>
+                </div>
+                <div class="savings-badge">Save {bundle.savings} vs. individual rental</div>
+                <a href="/contact#booking" class:list={['btn btn-book', bundle.featured ? 'btn--dark' : 'btn--primary']}>
+                  Book This Bundle
+                </a>
+              </div>
+            </div>
+
+            <div class="bundle-includes-grid">
+              <h4>What's included</h4>
+              <ul class="includes-list">
+                {bundle.includes.map(i => (
+                  <li>
+                    <span class="check">✓</span>
+                    <span>
+                      <strong>{i.item}</strong>
+                      {i.note && <span class="item-note"> — {i.note}</span>}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Custom bundle section -->
+  <section class="section section--tint">
+    <div class="container custom-bundle">
+      <div class="custom-bundle-text">
+        <span class="badge badge--green">Custom Option</span>
+        <h2>Need something different?</h2>
+        <p>Can't find the exact bundle for your trip? No problem. Get in touch and we'll put together a custom kit tailored to your group size, route, and duration. We also offer multi-week discounts and corporate rates.</p>
+        <ul class="custom-benefits">
+          <li>✓ Any combination of equipment</li>
+          <li>✓ Flexible pickup & delivery arrangements</li>
+          <li>✓ Multi-week and corporate discounts</li>
+          <li>✓ Expert advice on what you really need</li>
+        </ul>
+      </div>
+      <div class="custom-bundle-cta">
+        <a href="/contact" class="btn btn--primary">Contact Us to Build Your Kit</a>
+        <a href="/equipment" class="btn btn--outline">Browse All Equipment</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+.bundles-list { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.bundle-full {
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.bundle-full:hover { box-shadow: var(--shadow-lg); }
+.bundle-full--featured { border-color: var(--color-green); }
+.bundle-full--dark { background: var(--color-off-black); border-color: var(--color-off-black); }
+.bundle-full--dark h2,
+.bundle-full--dark h4,
+.bundle-full--dark p,
+.bundle-full--dark li,
+.bundle-full--dark strong { color: var(--color-white); }
+.bundle-full--dark .item-note { color: rgba(255,255,255,.5); }
+.bundle-full--dark .savings-badge { background: rgba(255,255,255,.15); color: rgba(255,255,255,.8); }
+
+.featured-badge {
+  position: absolute;
+  top: 0; right: 2.5rem;
+  background: var(--color-green);
+  color: white;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  padding: .3rem 1rem;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.bundle-full-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  align-items: start;
+}
+.bundle-full--dark .bundle-full-header { border-color: rgba(255,255,255,.1); }
+
+.bundle-name-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
+.bundle-big-icon { font-size: 2.8rem; line-height: 1; flex-shrink: 0; }
+.bundle-name-row h2 { font-size: 1.7rem; margin-bottom: .2rem; }
+.bundle-tagline { color: var(--color-mid); font-size: .95rem; }
+.bundle-full--dark .bundle-tagline { color: rgba(255,255,255,.55); }
+.bundle-desc { font-size: .95rem; color: var(--color-mid); margin-bottom: .5rem; }
+.bundle-full--dark .bundle-desc { color: rgba(255,255,255,.65); }
+.bundle-ideal { font-size: .88rem; color: var(--color-muted); }
+.bundle-full--dark .bundle-ideal { color: rgba(255,255,255,.45); }
+
+.bundle-pricing {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  text-align: right;
+}
+.price-block { display: flex; flex-direction: column; gap: .15rem; }
+.price-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--color-muted); }
+.bundle-full--dark .price-label { color: rgba(255,255,255,.4); }
+.price-big { font-size: 1.5rem; font-weight: 700; color: var(--color-green); }
+.bundle-full--dark .price-big { color: var(--color-green-light); }
+.price-week { font-size: 1.1rem; font-weight: 600; color: var(--color-dark); }
+.bundle-full--dark .price-week { color: rgba(255,255,255,.8); }
+.savings-badge {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--color-green-dark);
+  background: var(--color-green-tint);
+  padding: .25rem .6rem;
+  border-radius: 100px;
+  text-align: center;
+}
+
+.btn-book { justify-content: center; width: 100%; }
+
+.bundle-includes-grid h4 {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+.bundle-full--dark .bundle-includes-grid h4 { color: var(--color-green-light); }
+.includes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px,100%),1fr));
+  gap: .4rem .75rem;
+}
+.includes-list li {
+  display: flex;
+  gap: .5rem;
+  font-size: .88rem;
+  color: var(--color-dark);
+}
+.bundle-full--dark .includes-list li { color: rgba(255,255,255,.75); }
+.check { color: var(--color-green); font-weight: 700; flex-shrink: 0; }
+.bundle-full--dark .check { color: var(--color-green-light); }
+.item-note { font-size: .82rem; color: var(--color-muted); }
+
+.custom-bundle {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+.custom-bundle-text h2 { margin-bottom: .75rem; }
+.custom-bundle-text p { color: var(--color-mid); font-size: .95rem; margin-bottom: 1rem; }
+.custom-benefits { display: flex; flex-direction: column; gap: .4rem; }
+.custom-benefits li { font-size: .9rem; color: var(--color-dark); }
+.custom-bundle-cta { display: flex; flex-direction: column; gap: .75rem; min-width: 200px; }
+.custom-bundle-cta .btn { justify-content: center; }
+
+@media (max-width: 768px) {
+  .bundle-full-header { grid-template-columns: 1fr; }
+  .bundle-pricing { text-align: left; }
+  .custom-bundle { grid-template-columns: 1fr; }
+}
+</style>

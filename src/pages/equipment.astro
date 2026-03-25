@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const categories = [
+  {
+    id: 'tents',
+    name: 'Tents',
+    icon: '⛺',
+    description: 'All our tents are 4-season rated and tested for Iceland\'s strong winds. We carry solo shelters, dome tents, and large family options from Hilleberg, MSR, and Vango.',
+    items: [
+      { name: 'Hilleberg Akto — 1 person', desc: 'Ultralight tunnel tent, legendary wind resistance. Perfect for solo highland treks.', price: '3,500 ISK/day', weight: '1.3 kg' },
+      { name: 'MSR Hubba Hubba — 2 person', desc: 'Best-selling freestanding tent. Light, easy to pitch, great ventilation.', price: '4,200 ISK/day', weight: '1.7 kg' },
+      { name: 'Vango Tigris 300 — 3 person', desc: 'Tunnel tent with large porch space. Great for couples needing extra room.', price: '5,800 ISK/day', weight: '3.0 kg' },
+      { name: 'Outwell Cloud 4 — 4 person', desc: 'Spacious dome tent with two bedrooms. Ideal for families.', price: '7,200 ISK/day', weight: '5.2 kg' },
+      { name: 'Vango Odyssey Air 600 — 6 person', desc: 'Inflatable tunnel tent for large groups or serious comfort seekers.', price: '9,500 ISK/day', weight: '9.8 kg' },
+    ],
+  },
+  {
+    id: 'sleeping',
+    name: 'Sleeping Gear',
+    icon: '🛏️',
+    description: 'Iceland nights can be cold even in summer — especially in the highlands or on the coast. Our sleeping bags are rated down to −10°C, and our sleep pads provide excellent insulation from the ground.',
+    items: [
+      { name: 'Sea to Summit Spark SP3 — 3°C', desc: 'Lightweight down sleeping bag, great for summer camping.', price: '1,400 ISK/day', weight: '520 g' },
+      { name: 'Therm-a-Rest Questar — −6°C', desc: 'Versatile 3-season down bag, perfect for Iceland\'s shoulder seasons.', price: '1,800 ISK/day', weight: '680 g' },
+      { name: 'Mountain Hardwear Lamina — −10°C', desc: 'Synthetic bag ideal for wet conditions. Warm even when damp.', price: '2,000 ISK/day', weight: '1.1 kg' },
+      { name: 'Therm-a-Rest NeoAir XLite — Sleep Pad', desc: 'Ultralight inflatable sleeping pad with exceptional warmth (R-value 4.2).', price: '1,000 ISK/day', weight: '340 g' },
+      { name: 'Therm-a-Rest MondoKing — Foam Pad', desc: 'Plush self-inflating pad for maximum comfort at camp.', price: '700 ISK/day', weight: '1.4 kg' },
+    ],
+  },
+  {
+    id: 'cooking',
+    name: 'Cooking & Kitchen',
+    icon: '🍳',
+    description: 'From quick morning coffee to full camp dinners, our cooking gear covers every need. Stoves, pots, pans, utensil sets, and water filtration — all cleaned and ready to go.',
+    items: [
+      { name: 'MSR PocketRocket 2 — 1-burner stove', desc: 'Ultralight and fast-boiling. The classic backpacking stove.', price: '700 ISK/day', weight: '73 g' },
+      { name: 'MSR WhisperLite Universal — Multi-fuel', desc: 'Reliable stove for extended trips. Burns gas, white gas, and kerosene.', price: '900 ISK/day', weight: '360 g' },
+      { name: 'Campingaz 2-burner stove', desc: 'Perfect for car campers needing to cook for a group.', price: '1,400 ISK/day', weight: '2.5 kg' },
+      { name: 'MSR Flex 2 Cookset', desc: 'Two hard-anodised pots and a frying pan with insulated handles.', price: '800 ISK/day', weight: '390 g' },
+      { name: 'MSR Flex 4 Cookset', desc: 'Three-piece nesting cookset for groups of 4. Includes all lids.', price: '1,100 ISK/day', weight: '640 g' },
+      { name: 'Katadyn BeFree — Water filter', desc: 'Drink directly from streams and rivers. Essential for highland travel.', price: '500 ISK/day', weight: '57 g' },
+    ],
+  },
+  {
+    id: 'lighting',
+    name: 'Lighting',
+    icon: '🔦',
+    description: 'Iceland has midnight sun in summer and very long nights in winter. Whether you need a headlamp for midnight hikes or a lantern for the tent, we have it covered.',
+    items: [
+      { name: 'Black Diamond Storm 500 — Headlamp', desc: '500-lumen waterproof headlamp. Ideal for hikes and camp tasks.', price: '400 ISK/day', weight: '112 g' },
+      { name: 'Petzl Actik Core — Headlamp', desc: 'Rechargeable headlamp with 450 lumens. Great value for multi-day trips.', price: '350 ISK/day', weight: '87 g' },
+      { name: 'BioLite SiteLight XL — Lantern', desc: 'Solar-powered string lights with 100 LEDs. Sets the perfect camp atmosphere.', price: '600 ISK/day', weight: '400 g' },
+      { name: 'Black Diamond Moji — Tent lantern', desc: 'Compact, warm-toned LED lantern perfect for tent lighting.', price: '350 ISK/day', weight: '93 g' },
+    ],
+  },
+  {
+    id: 'clothing',
+    name: 'Clothing & Layers',
+    icon: '🧥',
+    description: 'Iceland weather is famously unpredictable. We offer high-quality rain gear, fleece layers, and thermal base layers so you stay comfortable in any conditions.',
+    items: [
+      { name: 'Helly Hansen Loke Jacket — Hardshell', desc: 'Waterproof, windproof, breathable. Essential outer layer.', price: '1,500 ISK/day' },
+      { name: 'Helly Hansen Loke Trousers — Hardshell', desc: 'Fully waterproof over-trousers with adjustable waist.', price: '1,000 ISK/day' },
+      { name: 'Fjällräven Keb Fleece', desc: 'Mid-layer fleece in multiple sizes. Incredibly warm and comfortable.', price: '800 ISK/day' },
+      { name: 'Merino wool base layer set (top + bottom)', desc: 'Odour-resistant, moisture-wicking. Available in S–XL.', price: '700 ISK/day' },
+      { name: 'Neoprene river-crossing gaiters', desc: 'Essential safety gear for highland river crossings.', price: '500 ISK/day' },
+    ],
+  },
+  {
+    id: 'accessories',
+    name: 'Accessories & More',
+    icon: '🎒',
+    description: 'Complete your setup with our range of accessories — from trekking poles and dry bags to coolers and camp furniture.',
+    items: [
+      { name: 'Black Diamond Trail trekking poles (pair)', desc: 'Adjustable aluminium poles. Essential for highland routes.', price: '600 ISK/day', weight: '560 g' },
+      { name: 'Sea to Summit Ultra-Sil dry bag (20L)', desc: 'Keep your clothes and electronics dry in any weather.', price: '300 ISK/day', weight: '33 g' },
+      { name: 'Coleman cooler box (40L)', desc: 'Hard-sided cooler keeps food cold for days. Great for road trips.', price: '900 ISK/day', weight: '4.5 kg' },
+      { name: 'Helinox Chair One — Camp chair', desc: 'Ultralight and packable. Surprisingly comfortable after a long hike.', price: '500 ISK/day', weight: '960 g' },
+      { name: 'Camp table (foldable, seats 4)', desc: 'Lightweight aluminium folding table. Easy to transport in a car.', price: '800 ISK/day', weight: '3.2 kg' },
+      { name: 'Garmin inReach Mini 2 — Satellite communicator', desc: 'Stay connected and send SOS from anywhere in Iceland. Highly recommended for highland travel.', price: '1,500 ISK/day', weight: '100 g' },
+    ],
+  },
+];
+---
+
+<Layout
+  title="Equipment — Iceland Camp Gear"
+  description="Browse our full range of camping equipment for rent in Iceland. Tents, sleeping bags, stoves, clothing and more — all Iceland-ready."
+>
+  <div class="page-hero">
+    <div class="container">
+      <span class="badge badge--white">Quality Gear, Every Item</span>
+      <h1>Our Equipment</h1>
+      <p>High-quality, Iceland-tested gear available to rent by the day or week. Everything cleaned and prepared for your adventure.</p>
+    </div>
+  </div>
+
+  <!-- Category nav -->
+  <nav class="cat-nav" aria-label="Equipment categories">
+    <div class="container cat-nav-inner">
+      {categories.map(cat => (
+        <a href={`#${cat.id}`} class="cat-nav-link">
+          <span>{cat.icon}</span> {cat.name}
+        </a>
+      ))}
+    </div>
+  </nav>
+
+  <div class="container eq-page">
+    {categories.map(cat => (
+      <section class="eq-section" id={cat.id}>
+        <div class="eq-section-header">
+          <span class="cat-icon">{cat.icon}</span>
+          <div>
+            <h2>{cat.name}</h2>
+            <p>{cat.description}</p>
+          </div>
+        </div>
+
+        <div class="eq-items-grid">
+          {cat.items.map(item => (
+            <div class="eq-item">
+              <div class="eq-item-top">
+                <h4>{item.name}</h4>
+                <span class="price">{item.price}</span>
+              </div>
+              <p>{item.desc}</p>
+              {item.weight && <span class="weight-tag">Weight: {item.weight}</span>}
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <!-- Rental info strip -->
+  <section class="rental-info section--tint section">
+    <div class="container">
+      <div class="rental-info-grid">
+        <div>
+          <h3>📅 Rental Periods</h3>
+          <p>Minimum rental is 2 days. Weekly rates available — contact us for long-term pricing for trips over 10 days.</p>
+        </div>
+        <div>
+          <h3>🚐 Pickup & Delivery</h3>
+          <p>Free pickup at our Reykjavík warehouse. Delivery available across Iceland — contact us for a quote based on your location.</p>
+        </div>
+        <div>
+          <h3>🔒 Deposit & Insurance</h3>
+          <p>A refundable deposit is taken at pickup. Optional damage insurance available for 15% of rental cost.</p>
+        </div>
+        <div>
+          <h3>💳 Payment</h3>
+          <p>We accept all major credit cards, bank transfer, and PayPal. Full payment required to confirm your booking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center section">
+    <h2>Need help choosing?</h2>
+    <p class="mt-2" style="color:var(--color-mid);max-width:480px;margin-inline:auto">Our bundles take the guesswork out of it — or get in touch and we'll put together a custom kit for your trip.</p>
+    <div class="flex-center mt-3">
+      <a href="/bundles" class="btn btn--primary">View Bundles</a>
+      <a href="/contact" class="btn btn--outline">Contact Us</a>
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+.cat-nav {
+  position: sticky;
+  top: 68px;
+  z-index: 50;
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+.cat-nav-inner {
+  display: flex;
+  overflow-x: auto;
+  gap: .25rem;
+  padding-block: .5rem;
+  scrollbar-width: none;
+}
+.cat-nav-inner::-webkit-scrollbar { display: none; }
+.cat-nav-link {
+  white-space: nowrap;
+  font-size: .85rem;
+  font-weight: 500;
+  padding: .4rem .85rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  transition: all .15s;
+}
+.cat-nav-link:hover { background: var(--color-green-tint); color: var(--color-green-dark); }
+
+.eq-page { padding-block: 3rem 5rem; }
+
+.eq-section { margin-bottom: 4rem; scroll-margin-top: 140px; }
+
+.eq-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--color-green-tint);
+}
+.cat-icon { font-size: 2.5rem; flex-shrink: 0; }
+.eq-section-header h2 { font-size: 1.8rem; margin-bottom: .35rem; }
+.eq-section-header p { font-size: .95rem; color: var(--color-mid); }
+
+.eq-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px,100%), 1fr));
+  gap: 1rem;
+}
+.eq-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+.eq-item:hover { border-color: var(--color-green-muted); box-shadow: var(--shadow-sm); }
+.eq-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .75rem;
+}
+.eq-item h4 { font-size: .95rem; font-family: var(--font-sans); flex: 1; }
+.eq-item p { font-size: .85rem; color: var(--color-mid); }
+.weight-tag { font-size: .78rem; color: var(--color-muted); border-top: 1px solid var(--color-border); padding-top: .4rem; margin-top: .2rem; }
+
+.rental-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px,100%), 1fr));
+  gap: 2rem;
+}
+.rental-info-grid h3 { font-family: var(--font-sans); font-size: 1rem; margin-bottom: .5rem; }
+.rental-info-grid p { font-size: .9rem; color: var(--color-mid); }
+</style>

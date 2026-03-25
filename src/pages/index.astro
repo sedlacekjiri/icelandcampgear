@@ -1,0 +1,725 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Iceland Camp Gear — Rent High-Quality Camping Equipment in Iceland"
+  description="Explore Iceland with premium camping gear. We rent tents, sleeping bags, cooking equipment and complete bundles — delivered to you in Reykjavík or across Iceland."
+>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero-media">
+      <img
+        src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dce76c6a35e7e2340197b_DJI_0069.jpg"
+        alt="Aerial view of Iceland's vast wilderness"
+        class="hero-img"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <span class="badge badge--white">Based in Reykjavík · Delivery across Iceland</span>
+      <h1>Explore Iceland<br /><em>Fully Equipped</em></h1>
+      <p>Premium camping gear rental for adventurers who want to experience Iceland's raw beauty — without the hassle of travelling with heavy equipment.</p>
+      <div class="hero-actions">
+        <a href="/bundles" class="btn btn--primary">View Bundles</a>
+        <a href="/equipment" class="btn btn--outline-white">See All Gear</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>500+</strong>
+          <span>Happy Campers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>100%</strong>
+          <span>High-Quality Gear</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>Support Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY CHOOSE US
+  ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--green">Why Iceland Camp Gear</span>
+        <h2>Everything you need for the perfect Iceland adventure</h2>
+        <div class="divider"></div>
+        <p>Skip the luggage fees and arrive light. We provide top-of-the-line gear, cleaned and tested before every rental.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏔️</div>
+          <h3>Iceland-Ready Gear</h3>
+          <p>All equipment is selected for Iceland's unique conditions — wind, rain, and cold. Nothing but the best brands: MSR, Hilleberg, Therm-a-Rest.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚐</div>
+          <h3>Free Reykjavík Pickup</h3>
+          <p>Collect your gear from our Reykjavík location or choose delivery to your hotel, guesthouse, or campsite across Iceland.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Cleaned & Tested</h3>
+          <p>Every item is professionally cleaned, inspected, and repacked between rentals. You get gear that performs like new every time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Flexible Bundles</h3>
+          <p>From solo adventurers to family expeditions, our bundles cover every need — or build your own custom kit from our full range.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>Sustainable Approach</h3>
+          <p>Renting means fewer items produced and fewer bags on flights. We use eco-friendly cleaning products and minimal packaging.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Expert Advice</h3>
+          <p>Our team knows Iceland inside out. We'll help you choose the right gear for your route, season, and experience level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EQUIPMENT CATEGORIES
+  ============================================================ -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--green">Our Equipment</span>
+        <h2>Everything from shelter to stove</h2>
+        <div class="divider"></div>
+        <p>Browse our full range of high-quality camping equipment, available for daily or weekly rental.</p>
+      </div>
+
+      <div class="grid-3">
+        <a href="/equipment#tents" class="eq-card">
+          <div class="eq-img-wrap">
+            <img
+              src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg"
+              alt="Camping tents in Iceland"
+              loading="lazy"
+            />
+          </div>
+          <div class="eq-body">
+            <h3>Tents</h3>
+            <p>4-season tents built for Iceland's winds and weather. From lightweight solo shelters to spacious family domes.</p>
+            <span class="eq-price">from <strong>2,500 ISK/day</strong></span>
+          </div>
+        </a>
+
+        <a href="/equipment#sleeping" class="eq-card">
+          <div class="eq-img-wrap">
+            <img
+              src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b6346fa8b47bafe2cf0f_0B7A5459.jpeg"
+              alt="Sleeping bags and pads"
+              loading="lazy"
+            />
+          </div>
+          <div class="eq-body">
+            <h3>Sleeping Gear</h3>
+            <p>Warm sleeping bags rated to −10°C and self-inflating pads for a comfortable night under Iceland's midnight sun.</p>
+            <span class="eq-price">from <strong>1,200 ISK/day</strong></span>
+          </div>
+        </a>
+
+        <a href="/equipment#cooking" class="eq-card">
+          <div class="eq-img-wrap">
+            <img
+              src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633bbd8bc5e09a5992a180f_0B7A5348_2.png"
+              alt="Camping cooking gear"
+              loading="lazy"
+            />
+          </div>
+          <div class="eq-body">
+            <h3>Cooking & Kitchen</h3>
+            <p>Camp stoves, cooksets, coffee makers, and water filters. Everything you need to cook in the wild.</p>
+            <span class="eq-price">from <strong>800 ISK/day</strong></span>
+          </div>
+        </a>
+
+        <a href="/equipment#lighting" class="eq-card">
+          <div class="eq-img-wrap">
+            <img
+              src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/665f211c6cf86c45992d44cd_0B7A7792.JPG"
+              alt="Camping lanterns and lighting"
+              loading="lazy"
+            />
+          </div>
+          <div class="eq-body">
+            <h3>Lighting</h3>
+            <p>LED lanterns, headlamps, and solar-powered lights — essential for Iceland's long summer days and dark winters.</p>
+            <span class="eq-price">from <strong>400 ISK/day</strong></span>
+          </div>
+        </a>
+
+        <a href="/equipment#clothing" class="eq-card">
+          <div class="eq-img-wrap">
+            <img
+              src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg"
+              alt="Outdoor clothing and layers"
+              loading="lazy"
+            />
+          </div>
+          <div class="eq-body">
+            <h3>Clothing & Layers</h3>
+            <p>Waterproof jackets, fleece mid-layers, base layers and gaiters. Stay warm and dry whatever the weather.</p>
+            <span class="eq-price">from <strong>900 ISK/day</strong></span>
+          </div>
+        </a>
+
+        <a href="/equipment#accessories" class="eq-card">
+          <div class="eq-img-wrap eq-img-placeholder">
+            <span>🎒</span>
+          </div>
+          <div class="eq-body">
+            <h3>Accessories & More</h3>
+            <p>Trekking poles, dry bags, coolers, camp chairs, tables, and everything else you might need on the road.</p>
+            <span class="eq-price">from <strong>300 ISK/day</strong></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/equipment" class="btn btn--outline">Browse All Equipment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BUNDLES
+  ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--green">Rental Bundles</span>
+        <h2>Save more with our curated bundles</h2>
+        <div class="divider"></div>
+        <p>Choose a complete bundle for the best value — all the gear you need, carefully matched, at a discounted rate.</p>
+      </div>
+
+      <div class="grid-3 bundles-grid">
+        <div class="bundle-card">
+          <div class="bundle-header">
+            <span class="bundle-icon">🧍</span>
+            <h3>Solo Adventurer</h3>
+            <p>The complete kit for independent travellers hitting Iceland solo.</p>
+          </div>
+          <ul class="bundle-includes">
+            <li>✓ 1-person 4-season tent</li>
+            <li>✓ Sleeping bag (−10°C)</li>
+            <li>✓ Self-inflating sleep pad</li>
+            <li>✓ 1-burner camp stove + fuel</li>
+            <li>✓ Cooking pot + utensils</li>
+            <li>✓ Headlamp</li>
+            <li>✓ Dry bag (20L)</li>
+          </ul>
+          <div class="bundle-price">
+            <span class="price">6,500 ISK <span>/day</span></span>
+            <small>Save 18% vs individual rental</small>
+          </div>
+          <a href="/contact#booking" class="btn btn--primary">Book This Bundle</a>
+        </div>
+
+        <div class="bundle-card bundle-card--featured">
+          <div class="bundle-badge">Most Popular</div>
+          <div class="bundle-header">
+            <span class="bundle-icon">👫</span>
+            <h3>Couple's Bundle</h3>
+            <p>Everything two adventurers need for the ultimate Iceland road trip.</p>
+          </div>
+          <ul class="bundle-includes">
+            <li>✓ 2-person 4-season tent</li>
+            <li>✓ 2× Sleeping bags (−10°C)</li>
+            <li>✓ 2× Sleep pads</li>
+            <li>✓ 2-burner stove + fuel</li>
+            <li>✓ Full cookset for 2</li>
+            <li>✓ 2× Headlamps</li>
+            <li>✓ Lantern + dry bags</li>
+            <li>✓ Camp chairs (2×)</li>
+          </ul>
+          <div class="bundle-price">
+            <span class="price">11,500 ISK <span>/day</span></span>
+            <small>Save 22% vs individual rental</small>
+          </div>
+          <a href="/contact#booking" class="btn btn--dark">Book This Bundle</a>
+        </div>
+
+        <div class="bundle-card">
+          <div class="bundle-header">
+            <span class="bundle-icon">👨‍👩‍👧‍👦</span>
+            <h3>Family Bundle</h3>
+            <p>Spacious and comfortable gear for families of 4 exploring Iceland together.</p>
+          </div>
+          <ul class="bundle-includes">
+            <li>✓ 4-person family tent</li>
+            <li>✓ 4× Sleeping bags</li>
+            <li>✓ 4× Sleep pads</li>
+            <li>✓ 2-burner stove + fuel</li>
+            <li>✓ Large cookset</li>
+            <li>✓ 4× Headlamps + lantern</li>
+            <li>✓ Cooler box + dry bags</li>
+            <li>✓ Camp table + 4 chairs</li>
+          </ul>
+          <div class="bundle-price">
+            <span class="price">19,500 ISK <span>/day</span></span>
+            <small>Save 25% vs individual rental</small>
+          </div>
+          <a href="/contact#booking" class="btn btn--primary">Book This Bundle</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/bundles" class="btn btn--outline">See All Bundles & Custom Options</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY STRIP
+  ============================================================ -->
+  <section class="gallery-strip">
+    <a href="/equipment" class="gallery-item">
+      <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg" alt="Iceland camping aerial" loading="lazy" />
+    </a>
+    <a href="/equipment#tents" class="gallery-item">
+      <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg" alt="Camping tents" loading="lazy" />
+    </a>
+    <a href="/bundles" class="gallery-item">
+      <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b6346fa8b47bafe2cf0f_0B7A5459.jpeg" alt="Camping gear" loading="lazy" />
+    </a>
+    <a href="/equipment#cooking" class="gallery-item">
+      <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633bbd8bc5e09a5992a180f_0B7A5348_2.png" alt="Cooking equipment" loading="lazy" />
+    </a>
+    <a href="/about" class="gallery-item">
+      <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/665f211c6cf86c45992d44cd_0B7A7792.JPG" alt="Iceland landscape" loading="lazy" />
+    </a>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+  ============================================================ -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--white">Simple Process</span>
+        <h2>How it works</h2>
+        <div class="divider"></div>
+        <p>Getting your Iceland camping gear is easy. Three steps and you're ready to go.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Choose Your Gear</h3>
+          <p>Browse our equipment catalogue or pick a ready-made bundle. Tell us your group size, dates, and where you want to pick up.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>We Prepare Everything</h3>
+          <p>We clean, test, and pack every item specifically for your trip. Your kit will be ready and waiting on your arrival day.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Explore & Return</h3>
+          <p>Pick up in Reykjavík or get it delivered. After your adventure, simply return the gear — we handle the rest.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/contact#booking" class="btn btn--primary">Start Booking</a>
+        <a href="/faq" class="btn btn--outline-white" style="margin-left:1rem">Read FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--green">Reviews</span>
+        <h2>What our campers say</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="grid-3">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Incredible service! The tent handled everything Iceland threw at it — 80 km/h winds near Landmannalaugar. We couldn't have asked for better gear."</p>
+          <div class="testimonial-author">
+            <strong>Sarah & Tom</strong>
+            <span>UK · Ring Road trip, 14 days</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"We rented the Family Bundle and it was perfect. Everything fit in the car easily. The kids loved the camp chairs. Will absolutely rent again next summer."</p>
+          <div class="testimonial-author">
+            <strong>The Andersen Family</strong>
+            <span>Denmark · West Iceland, 10 days</span>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"As a solo traveller on a tight budget, renting gear saved me hundreds. The sleeping bag was genuinely warm down to −5°C. Would highly recommend."</p>
+          <div class="testimonial-author">
+            <strong>Marco R.</strong>
+            <span>Italy · Highlands traverse, 8 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       JOURNAL PREVIEW
+  ============================================================ -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--green">Journal</span>
+        <h2>Iceland camping stories & guides</h2>
+        <div class="divider"></div>
+        <p>Inspiration, tips, and guides from our team and community of Iceland adventurers.</p>
+      </div>
+
+      <div class="grid-3">
+        <a href="/journal/ring-road-camping-guide" class="blog-preview-card">
+          <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dce76c6a35e7e2340197b_DJI_0069.jpg" alt="Ring Road" loading="lazy" />
+          <div class="blog-preview-body">
+            <span class="badge badge--green">Guide</span>
+            <h3>The Ultimate Ring Road Camping Guide</h3>
+            <p>Everything you need to know about camping Iceland's famous Route 1 — from best spots to essential gear.</p>
+            <span class="read-more">Read more →</span>
+          </div>
+        </a>
+
+        <a href="/journal/camping-in-iceland-highlands" class="blog-preview-card">
+          <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg" alt="Highlands" loading="lazy" />
+          <div class="blog-preview-body">
+            <span class="badge badge--green">Adventure</span>
+            <h3>Camping in the Icelandic Highlands</h3>
+            <p>The interior highlands are Iceland's last true wilderness. Here's how to plan your expedition safely.</p>
+            <span class="read-more">Read more →</span>
+          </div>
+        </a>
+
+        <a href="/journal/what-to-pack-iceland-camping" class="blog-preview-card">
+          <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg" alt="Packing gear" loading="lazy" />
+          <div class="blog-preview-body">
+            <span class="badge badge--green">Tips</span>
+            <h3>What to Pack for Iceland Camping</h3>
+            <p>Our definitive packing checklist — from layers and rain gear to electronics and safety essentials.</p>
+            <span class="read-more">Read more →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="/journal" class="btn btn--outline">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA STRIP
+  ============================================================ -->
+  <section class="cta-strip">
+    <div class="container cta-inner">
+      <div>
+        <h2>Ready to explore Iceland?</h2>
+        <p>Book your gear today and we'll have everything ready for your arrival.</p>
+      </div>
+      <a href="/contact#booking" class="btn btn--dark">Book Your Equipment</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  color: var(--color-white);
+  overflow: hidden;
+}
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.75) 0%,
+    rgba(0,0,0,.35) 50%,
+    rgba(0,0,0,.1) 100%
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.hero-content .badge { margin-bottom: 1.25rem; }
+.hero-content h1 {
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 12px rgba(0,0,0,.3);
+}
+.hero-content h1 em {
+  font-style: italic;
+  color: var(--color-green-light);
+}
+.hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.88);
+  max-width: 540px;
+  margin-bottom: 2rem;
+}
+.hero-actions {
+  display: flex;
+  gap: .85rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.stat strong {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+.stat span { font-size: .8rem; color: rgba(255,255,255,.6); }
+.stat-divider { width: 1px; height: 36px; background: rgba(255,255,255,.2); }
+
+/* ---- Features ---- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px,100%), 1fr));
+  gap: 1.5rem;
+}
+.feature-card {
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  transition: box-shadow .2s, transform .2s;
+}
+.feature-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.feature-icon { font-size: 2rem; margin-bottom: .75rem; }
+.feature-card h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+.feature-card p { font-size: .92rem; color: var(--color-mid); }
+
+/* ---- Equipment cards ---- */
+.eq-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s, transform .25s;
+  text-decoration: none;
+  color: inherit;
+}
+.eq-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.eq-img-wrap { overflow: hidden; }
+.eq-img-wrap img { width: 100%; height: 220px; object-fit: cover; transition: transform .4s; }
+.eq-img-placeholder {
+  height: 220px;
+  background: var(--color-green-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+.eq-card:hover .eq-img-wrap img { transform: scale(1.04); }
+.eq-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: .5rem; }
+.eq-body h3 { font-size: 1.15rem; }
+.eq-body p { font-size: .9rem; color: var(--color-mid); flex: 1; }
+.eq-price { font-size: .9rem; color: var(--color-muted); }
+.eq-price strong { color: var(--color-green); }
+
+/* ---- Bundles ---- */
+.bundle-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 2px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: box-shadow .2s, border-color .2s;
+}
+.bundle-card:hover { box-shadow: var(--shadow-lg); border-color: var(--color-green-muted); }
+.bundle-card--featured {
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 1px var(--color-green), var(--shadow-md);
+}
+.bundle-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-green);
+  color: white;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .25rem 1rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.bundle-header { text-align: center; }
+.bundle-icon { font-size: 2.5rem; display: block; margin-bottom: .5rem; }
+.bundle-header h3 { margin-bottom: .4rem; }
+.bundle-header p { font-size: .9rem; color: var(--color-mid); }
+.bundle-includes { display: flex; flex-direction: column; gap: .35rem; flex: 1; }
+.bundle-includes li { font-size: .88rem; color: var(--color-dark); }
+.bundle-price { text-align: center; }
+.bundle-price small { display: block; font-size: .78rem; color: var(--color-green); margin-top: .25rem; }
+.bundle-card .btn { width: 100%; justify-content: center; }
+
+/* ---- Gallery strip ---- */
+.gallery-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 260px;
+  overflow: hidden;
+}
+.gallery-item { overflow: hidden; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gallery-item:hover img { transform: scale(1.08); }
+
+/* ---- Steps ---- */
+.steps-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.step {
+  flex: 1;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
+}
+.step-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-green);
+  line-height: 1;
+  margin-bottom: .75rem;
+  font-family: var(--font-serif);
+}
+.step h3 { color: var(--color-white); margin-bottom: .5rem; }
+.step p { font-size: .92rem; color: rgba(255,255,255,.7); }
+.step-arrow {
+  font-size: 2rem;
+  color: var(--color-green-light);
+  align-self: center;
+  opacity: .6;
+  flex-shrink: 0;
+}
+
+/* ---- Testimonials ---- */
+.testimonial {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+}
+.stars { color: var(--color-green); font-size: 1.1rem; margin-bottom: .75rem; letter-spacing: .1em; }
+.testimonial p { font-size: .95rem; color: var(--color-dark); font-style: italic; margin-bottom: 1.25rem; }
+.testimonial-author strong { display: block; font-size: .9rem; }
+.testimonial-author span { font-size: .8rem; color: var(--color-muted); }
+
+/* ---- Blog preview ---- */
+.blog-preview-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow .25s, transform .25s;
+}
+.blog-preview-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.blog-preview-card > img { width: 100%; height: 200px; object-fit: cover; }
+.blog-preview-body { padding: 1.4rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+.blog-preview-body h3 { font-size: 1.1rem; }
+.blog-preview-body p { font-size: .9rem; color: var(--color-mid); flex: 1; }
+.read-more { font-size: .88rem; font-weight: 600; color: var(--color-green); }
+
+/* ---- CTA strip ---- */
+.cta-strip {
+  background: var(--color-green);
+  padding-block: 3rem;
+}
+.cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.cta-inner h2 { color: var(--color-white); }
+.cta-inner p { color: rgba(255,255,255,.8); margin-top: .25rem; }
+
+@media (max-width: 640px) {
+  .hero { min-height: 100svh; align-items: flex-end; }
+  .gallery-strip { grid-template-columns: repeat(2, 1fr); height: auto; }
+  .gallery-strip .gallery-item:last-child { grid-column: 1 / -1; }
+  .gallery-item { height: 160px; }
+  .steps-grid { flex-direction: column; align-items: center; }
+  .step-arrow { transform: rotate(90deg); }
+  .cta-inner { flex-direction: column; text-align: center; }
+}
+</style>

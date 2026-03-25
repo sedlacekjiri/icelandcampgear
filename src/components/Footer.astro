@@ -1,0 +1,149 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">
+        <span class="logo-icon">⛺</span>
+        <span class="logo-text">Iceland<strong>CampGear</strong></span>
+      </a>
+      <p>Premium camping equipment rental for exploring Iceland's wild landscapes. Based in Reykjavík — we deliver across the island.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/icelandcampgear" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/icelandcampgear" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Gear</h4>
+      <ul>
+        <li><a href="/equipment#tents">Tents</a></li>
+        <li><a href="/equipment#sleeping">Sleeping Gear</a></li>
+        <li><a href="/equipment#cooking">Cooking</a></li>
+        <li><a href="/equipment#lighting">Lighting</a></li>
+        <li><a href="/equipment#clothing">Clothing & Layers</a></li>
+        <li><a href="/bundles">Bundles</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/journal">Journal</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact#booking">Book Equipment</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Get in Touch</h4>
+      <address>
+        <p>📍 Reykjavík, Iceland</p>
+        <p><a href="mailto:hello@icelandcampgear.com">hello@icelandcampgear.com</a></p>
+        <p><a href="tel:+3545551234">+354 555 1234</a></p>
+      </address>
+      <p class="hours">Open daily: 8:00 – 20:00<br>(Jun – Aug extended hours)</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; {year} IcelandCampGear. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms & Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  background: var(--color-off-black);
+  color: rgba(255,255,255,.75);
+  padding-top: 4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.logo { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; }
+.logo-icon { font-size: 1.4rem; }
+.logo-text { font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-white); }
+.logo-text strong { color: var(--color-green-light); }
+
+.footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 280px; margin-bottom: 1.25rem; }
+
+.social-links { display: flex; gap: .75rem; }
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.7);
+  transition: all .2s;
+}
+.social-links a:hover { border-color: var(--color-green-light); color: var(--color-green-light); }
+
+.footer-links h4,
+.footer-contact h4 {
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-green-light);
+  margin-bottom: 1rem;
+}
+
+.footer-links ul li { margin-bottom: .5rem; }
+.footer-links a {
+  font-size: .9rem;
+  color: rgba(255,255,255,.65);
+  transition: color .15s;
+}
+.footer-links a:hover { color: var(--color-white); }
+
+.footer-contact address { font-style: normal; }
+.footer-contact address p { font-size: .9rem; margin-bottom: .5rem; }
+.footer-contact a { color: rgba(255,255,255,.65); transition: color .15s; }
+.footer-contact a:hover { color: var(--color-white); }
+.hours { font-size: .82rem; color: rgba(255,255,255,.45); margin-top: 1rem; line-height: 1.6; }
+
+.footer-bottom { padding-block: 1.25rem; }
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+.footer-bottom p { font-size: .82rem; color: rgba(255,255,255,.35); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: .82rem; color: rgba(255,255,255,.35); transition: color .15s; }
+.footer-legal a:hover { color: rgba(255,255,255,.7); }
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>

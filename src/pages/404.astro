@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found — Iceland Camp Gear">
+  <section class="not-found">
+    <div class="container">
+      <div class="nf-content">
+        <span class="nf-icon">🗺️</span>
+        <h1>404</h1>
+        <h2>Lost in Iceland?</h2>
+        <p>The page you're looking for doesn't exist — perhaps it wandered off into the highlands.</p>
+        <div class="flex-center mt-4">
+          <a href="/" class="btn btn--primary">Back to Home</a>
+          <a href="/equipment" class="btn btn--outline">Browse Equipment</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.nf-content { max-width: 500px; margin-inline: auto; }
+.nf-icon { font-size: 4rem; display: block; margin-bottom: 1rem; }
+.nf-content h1 { font-size: 6rem; color: var(--color-green); line-height: 1; margin-bottom: .25rem; }
+.nf-content h2 { margin-bottom: .75rem; }
+.nf-content p { color: var(--color-mid); }
+</style>
