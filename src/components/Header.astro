@@ -15,8 +15,13 @@ const currentPath = Astro.url.pathname;
 <header class="site-header">
   <div class="container header-inner">
     <a href={base} class="logo" aria-label="Iceland Camp Gear — Home">
-      <span class="logo-icon">⛺</span>
-      <span class="logo-text">Iceland<strong>CampGear</strong></span>
+      <img
+        src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/680e51cd81991652a539c692_663403d8c8805505564df759_logo_black-2.svg"
+        alt="Iceland Camp Gear"
+        class="logo-img"
+        width="160"
+        height="40"
+      />
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -73,18 +78,14 @@ const currentPath = Astro.url.pathname;
 .logo {
   display: flex;
   align-items: center;
-  gap: .5rem;
   text-decoration: none;
   flex-shrink: 0;
 }
-.logo-icon { font-size: 1.4rem; line-height: 1; }
-.logo-text {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  color: var(--color-black);
-  letter-spacing: -.01em;
+.logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
-.logo-text strong { color: var(--color-green); }
 
 /* Nav */
 .site-nav {

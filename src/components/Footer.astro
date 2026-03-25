@@ -7,8 +7,14 @@ const base = import.meta.env.BASE_URL;
   <div class="container footer-grid">
     <div class="footer-brand">
       <a href={base} class="logo">
-        <span class="logo-icon">⛺</span>
-        <span class="logo-text">Iceland<strong>CampGear</strong></span>
+        <img
+          src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/680e51cd81991652a539c692_663403d8c8805505564df759_logo_black-2.svg"
+          alt="Iceland Camp Gear"
+          class="logo-img"
+          width="160"
+          height="40"
+          style="filter: brightness(0) invert(1);"
+        />
       </a>
       <p>Premium camping equipment rental for exploring Iceland's wild landscapes. Based in Reykjavík — we deliver across the island.</p>
       <div class="social-links">
@@ -81,10 +87,8 @@ const base = import.meta.env.BASE_URL;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
-.logo { display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; }
-.logo-icon { font-size: 1.4rem; }
-.logo-text { font-family: var(--font-serif); font-size: 1.1rem; color: var(--color-white); }
-.logo-text strong { color: var(--color-green-light); }
+.logo { display: flex; align-items: center; margin-bottom: 1rem; }
+.logo-img { height: 32px; width: auto; display: block; }
 
 .footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 280px; margin-bottom: 1.25rem; }
 

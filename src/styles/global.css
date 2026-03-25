@@ -19,7 +19,7 @@
   --color-off-white:    #f9f9f6;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Inter', system-ui, -apple-system, sans-serif;
 
   --radius-sm:  4px;
   --radius-md:  8px;
@@ -64,8 +64,8 @@ ul, ol { list-style: none; }
 
 /* ---- Typography ---- */
 h1, h2, h3, h4, h5 {
-  font-family: var(--font-serif);
-  font-weight: 700;
+  font-family: var(--font-sans);
+  font-weight: 800;
   line-height: 1.15;
   color: var(--color-black);
 }
