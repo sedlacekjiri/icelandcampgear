@@ -47,8 +47,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="info-block">
           <h3>💡 Before You Book</h3>
           <ul class="pre-book-tips">
-            <li>Check our <a href="/equipment">equipment page</a> for individual item availability and pricing.</li>
-            <li>See our <a href="/bundles">bundles page</a> for the best-value combinations.</li>
+            <li>Check our <a href={`${import.meta.env.BASE_URL}equipment`}>equipment page</a> for individual item availability and pricing.</li>
+            <li>See our <a href={`${import.meta.env.BASE_URL}bundles`}>bundles page</a> for the best-value combinations.</li>
             <li>Minimum rental is 2 days. Contact us for multi-week discounts.</li>
             <li>We recommend booking at least 3–5 days in advance, especially in peak season (June–August).</li>
           </ul>

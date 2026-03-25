@@ -11,8 +11,8 @@ import Layout from '../layouts/Layout.astro';
         <h2>Lost in Iceland?</h2>
         <p>The page you're looking for doesn't exist — perhaps it wandered off into the highlands.</p>
         <div class="flex-center mt-4">
-          <a href="/" class="btn btn--primary">Back to Home</a>
-          <a href="/equipment" class="btn btn--outline">Browse Equipment</a>
+          <a href={import.meta.env.BASE_URL} class="btn btn--primary">Back to Home</a>
+          <a href={`${import.meta.env.BASE_URL}equipment`} class="btn btn--outline">Browse Equipment</a>
         </div>
       </div>
     </div>

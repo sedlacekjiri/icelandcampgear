@@ -86,7 +86,7 @@ const categories = ['All', 'Guide', 'Adventure', 'Tips'];
       </div>
 
       <!-- Featured post -->
-      <a href={`/journal/${posts[0].slug}`} class="featured-post">
+      <a href={`${import.meta.env.BASE_URL}journal/${posts[0].slug}`} class="featured-post">
         <div class="featured-img">
           <img src={posts[0].image} alt={posts[0].title} loading="eager" />
         </div>
@@ -106,7 +106,7 @@ const categories = ['All', 'Guide', 'Adventure', 'Tips'];
       <!-- Post grid -->
       <div class="posts-grid">
         {posts.slice(1).map(post => (
-          <a href={`/journal/${post.slug}`} class="post-card" data-category={post.category}>
+          <a href={`${import.meta.env.BASE_URL}journal/${post.slug}`} class="post-card" data-category={post.category}>
             <div class="post-img">
               <img src={post.image} alt={post.title} loading="lazy" />
               <span class="post-cat-overlay">{post.category}</span>

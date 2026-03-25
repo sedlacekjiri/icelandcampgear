@@ -174,7 +174,7 @@ const bundles = [
                   <span class="price-week">{bundle.priceWeek} ISK</span>
                 </div>
                 <div class="savings-badge">Save {bundle.savings} vs. individual rental</div>
-                <a href="/contact#booking" class:list={['btn btn-book', bundle.featured ? 'btn--dark' : 'btn--primary']}>
+                <a href={`${import.meta.env.BASE_URL}contact#booking`} class:list={['btn btn-book', bundle.featured ? 'btn--dark' : 'btn--primary']}>
                   Book This Bundle
                 </a>
               </div>
@@ -216,8 +216,8 @@ const bundles = [
         </ul>
       </div>
       <div class="custom-bundle-cta">
-        <a href="/contact" class="btn btn--primary">Contact Us to Build Your Kit</a>
-        <a href="/equipment" class="btn btn--outline">Browse All Equipment</a>
+        <a href={`${import.meta.env.BASE_URL}contact`} class="btn btn--primary">Contact Us to Build Your Kit</a>
+        <a href={`${import.meta.env.BASE_URL}equipment`} class="btn btn--outline">Browse All Equipment</a>
       </div>
     </div>
   </section>

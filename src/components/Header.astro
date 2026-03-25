@@ -1,11 +1,12 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/equipment', label: 'Equipment' },
-  { href: '/bundles', label: 'Bundles' },
-  { href: '/about', label: 'About' },
-  { href: '/journal', label: 'Journal' },
-  { href: '/contact', label: 'Contact' },
+  { href: base, label: 'Home' },
+  { href: `${base}equipment`, label: 'Equipment' },
+  { href: `${base}bundles`, label: 'Bundles' },
+  { href: `${base}about`, label: 'About' },
+  { href: `${base}journal`, label: 'Journal' },
+  { href: `${base}contact`, label: 'Contact' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -13,7 +14,7 @@ const currentPath = Astro.url.pathname;
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Iceland Camp Gear — Home">
+    <a href={base} class="logo" aria-label="Iceland Camp Gear — Home">
       <span class="logo-icon">⛺</span>
       <span class="logo-text">Iceland<strong>CampGear</strong></span>
     </a>
@@ -28,14 +29,14 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href={link.href}
-              class:list={['nav-link', { active: currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+              class:list={['nav-link', { active: currentPath === link.href || (link.href !== base && currentPath.startsWith(link.href)) }]}
             >
               {link.label}
             </a>
           </li>
         ))}
       </ul>
-      <a href="/contact#booking" class="btn btn--primary header-cta">Book Now</a>
+      <a href={`${base}contact#booking`} class="btn btn--primary header-cta">Book Now</a>
     </nav>
   </div>
 </header>

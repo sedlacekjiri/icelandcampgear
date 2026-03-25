@@ -11,7 +11,7 @@ interface Props {
 }
 
 const {
-  title,
+  title = 'Iceland Camp Gear',
   description = 'Rent high-quality camping equipment in Iceland. Tents, sleeping bags, cooking gear, and complete bundles for your Iceland adventure.',
   image = 'https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dce76c6a35e7e2340197b_DJI_0069.jpg',
   ogType = 'website',
@@ -44,7 +44,7 @@ const fullTitle = title.includes('Iceland Camp Gear') ? title : `${title} | Icel
     <meta name="twitter:image"       content={image} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

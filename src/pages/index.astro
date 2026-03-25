@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -26,8 +27,8 @@ import Layout from '../layouts/Layout.astro';
       <h1>Explore Iceland<br /><em>Fully Equipped</em></h1>
       <p>Premium camping gear rental for adventurers who want to experience Iceland's raw beauty — without the hassle of travelling with heavy equipment.</p>
       <div class="hero-actions">
-        <a href="/bundles" class="btn btn--primary">View Bundles</a>
-        <a href="/equipment" class="btn btn--outline-white">See All Gear</a>
+        <a href={`${base}bundles`} class="btn btn--primary">View Bundles</a>
+        <a href={`${base}equipment`} class="btn btn--outline-white">See All Gear</a>
       </div>
       <div class="hero-stats">
         <div class="stat">
@@ -108,7 +109,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="grid-3">
-        <a href="/equipment#tents" class="eq-card">
+        <a href={`${base}equipment#tents`} class="eq-card">
           <div class="eq-img-wrap">
             <img
               src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg"
@@ -123,7 +124,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/equipment#sleeping" class="eq-card">
+        <a href={`${base}equipment#sleeping`} class="eq-card">
           <div class="eq-img-wrap">
             <img
               src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b6346fa8b47bafe2cf0f_0B7A5459.jpeg"
@@ -138,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/equipment#cooking" class="eq-card">
+        <a href={`${base}equipment#cooking`} class="eq-card">
           <div class="eq-img-wrap">
             <img
               src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633bbd8bc5e09a5992a180f_0B7A5348_2.png"
@@ -153,7 +154,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/equipment#lighting" class="eq-card">
+        <a href={`${base}equipment#lighting`} class="eq-card">
           <div class="eq-img-wrap">
             <img
               src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/665f211c6cf86c45992d44cd_0B7A7792.JPG"
@@ -168,7 +169,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/equipment#clothing" class="eq-card">
+        <a href={`${base}equipment#clothing`} class="eq-card">
           <div class="eq-img-wrap">
             <img
               src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg"
@@ -183,7 +184,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/equipment#accessories" class="eq-card">
+        <a href={`${base}equipment#accessories`} class="eq-card">
           <div class="eq-img-wrap eq-img-placeholder">
             <span>🎒</span>
           </div>
@@ -196,7 +197,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="text-center mt-4">
-        <a href="/equipment" class="btn btn--outline">Browse All Equipment</a>
+        <a href={`${base}equipment`} class="btn btn--outline">Browse All Equipment</a>
       </div>
     </div>
   </section>
@@ -233,7 +234,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="price">6,500 ISK <span>/day</span></span>
             <small>Save 18% vs individual rental</small>
           </div>
-          <a href="/contact#booking" class="btn btn--primary">Book This Bundle</a>
+          <a href={`${base}contact#booking`} class="btn btn--primary">Book This Bundle</a>
         </div>
 
         <div class="bundle-card bundle-card--featured">
@@ -257,7 +258,7 @@ import Layout from '../layouts/Layout.astro';
             <span class="price">11,500 ISK <span>/day</span></span>
             <small>Save 22% vs individual rental</small>
           </div>
-          <a href="/contact#booking" class="btn btn--dark">Book This Bundle</a>
+          <a href={`${base}contact#booking`} class="btn btn--dark">Book This Bundle</a>
         </div>
 
         <div class="bundle-card">
@@ -280,12 +281,12 @@ import Layout from '../layouts/Layout.astro';
             <span class="price">19,500 ISK <span>/day</span></span>
             <small>Save 25% vs individual rental</small>
           </div>
-          <a href="/contact#booking" class="btn btn--primary">Book This Bundle</a>
+          <a href={`${base}contact#booking`} class="btn btn--primary">Book This Bundle</a>
         </div>
       </div>
 
       <div class="text-center mt-4">
-        <a href="/bundles" class="btn btn--outline">See All Bundles & Custom Options</a>
+        <a href={`${base}bundles`} class="btn btn--outline">See All Bundles & Custom Options</a>
       </div>
     </div>
   </section>
@@ -294,19 +295,19 @@ import Layout from '../layouts/Layout.astro';
        GALLERY STRIP
   ============================================================ -->
   <section class="gallery-strip">
-    <a href="/equipment" class="gallery-item">
+    <a href={`${base}equipment`} class="gallery-item">
       <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg" alt="Iceland camping aerial" loading="lazy" />
     </a>
-    <a href="/equipment#tents" class="gallery-item">
+    <a href={`${base}equipment#tents`} class="gallery-item">
       <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg" alt="Camping tents" loading="lazy" />
     </a>
-    <a href="/bundles" class="gallery-item">
+    <a href={`${base}bundles`} class="gallery-item">
       <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b6346fa8b47bafe2cf0f_0B7A5459.jpeg" alt="Camping gear" loading="lazy" />
     </a>
-    <a href="/equipment#cooking" class="gallery-item">
+    <a href={`${base}equipment#cooking`} class="gallery-item">
       <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633bbd8bc5e09a5992a180f_0B7A5348_2.png" alt="Cooking equipment" loading="lazy" />
     </a>
-    <a href="/about" class="gallery-item">
+    <a href={`${base}about`} class="gallery-item">
       <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/665f211c6cf86c45992d44cd_0B7A7792.JPG" alt="Iceland landscape" loading="lazy" />
     </a>
   </section>
@@ -344,8 +345,8 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="text-center mt-4">
-        <a href="/contact#booking" class="btn btn--primary">Start Booking</a>
-        <a href="/faq" class="btn btn--outline-white" style="margin-left:1rem">Read FAQ</a>
+        <a href={`${base}contact#booking`} class="btn btn--primary">Start Booking</a>
+        <a href={`${base}faq`} class="btn btn--outline-white" style="margin-left:1rem">Read FAQ</a>
       </div>
     </div>
   </section>
@@ -405,7 +406,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="grid-3">
-        <a href="/journal/ring-road-camping-guide" class="blog-preview-card">
+        <a href={`${base}journal/ring-road-camping-guide`} class="blog-preview-card">
           <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dce76c6a35e7e2340197b_DJI_0069.jpg" alt="Ring Road" loading="lazy" />
           <div class="blog-preview-body">
             <span class="badge badge--green">Guide</span>
@@ -415,7 +416,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/journal/camping-in-iceland-highlands" class="blog-preview-card">
+        <a href={`${base}journal/camping-in-iceland-highlands`} class="blog-preview-card">
           <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/683dddd306c3e8c9f0cd6d2c_DJI_0042.jpg" alt="Highlands" loading="lazy" />
           <div class="blog-preview-body">
             <span class="badge badge--green">Adventure</span>
@@ -425,7 +426,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </a>
 
-        <a href="/journal/what-to-pack-iceland-camping" class="blog-preview-card">
+        <a href={`${base}journal/what-to-pack-iceland-camping`} class="blog-preview-card">
           <img src="https://cdn.prod.website-files.com/6610569bb1d54fb87d56726f/6633b96280bdb9d20fa56da9_0B7A5368.jpeg" alt="Packing gear" loading="lazy" />
           <div class="blog-preview-body">
             <span class="badge badge--green">Tips</span>
@@ -437,7 +438,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="text-center mt-4">
-        <a href="/journal" class="btn btn--outline">View All Articles</a>
+        <a href={`${base}journal`} class="btn btn--outline">View All Articles</a>
       </div>
     </div>
   </section>
@@ -451,7 +452,7 @@ import Layout from '../layouts/Layout.astro';
         <h2>Ready to explore Iceland?</h2>
         <p>Book your gear today and we'll have everything ready for your arrival.</p>
       </div>
-      <a href="/contact#booking" class="btn btn--dark">Book Your Equipment</a>
+      <a href={`${base}contact#booking`} class="btn btn--dark">Book Your Equipment</a>
     </div>
   </section>
 
